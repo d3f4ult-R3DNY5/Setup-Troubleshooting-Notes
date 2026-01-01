@@ -1,7 +1,7 @@
 # Installing and Configuring Windows 11 Machine on virtual manager
 ## Overview 
 ---
->[!info]
+>[!NOTE]
 >This Writeup contains the information on how to install and configure a windows 11 machine on the virtual machine manager
 >
 
