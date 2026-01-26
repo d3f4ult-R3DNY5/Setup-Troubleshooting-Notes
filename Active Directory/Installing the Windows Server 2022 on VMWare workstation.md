@@ -83,7 +83,7 @@ This writeup includes the step by step installation process of the windows serve
 
 ## Phase 2 : Installing the updates
 ---
-1. When your greeted by the sceen below , Head to **VM---> Send Ctrl + Alt + Del**
+1. When your greeted by the screen below , Head to **VM---> Send Ctrl + Alt + Del**
 
 ![](../images/Pasted%20image%2020260101151636.png)
 
