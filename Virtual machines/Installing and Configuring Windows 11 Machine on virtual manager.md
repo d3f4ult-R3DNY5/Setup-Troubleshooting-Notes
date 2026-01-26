@@ -20,24 +20,24 @@
 
 
 2. Once you have downloaded the .iso file , Open the Virtual machine manager **Go to "File → New Virtual Machine"**
-![](images/Pasted%20image%2020251213085846.png)
+![](../images/Pasted%20image%2020251213085846.png)
 
 3. Select the local installation media and hit forward, Then choose the iso file that you have downloaded from the website.
-![](images/Pasted%20image%2020251213090103.png)
+![](../images/Pasted%20image%2020251213090103.png)
 
 4. Configure the CPU and Cores accordingly , I have chosen the following specifications **4096 RAM and 4 cores CPU**
-![](images/Pasted%20image%2020251213090258.png)
+![](../images/Pasted%20image%2020251213090258.png)
 
 5. Now to configure the storage , By clicking on manage
-![](images/Pasted%20image%2020251213090856.png)
+![](../images/Pasted%20image%2020251213090856.png)
 6. Since I have already already configured my external HDD in the following [setup]([Debian-13 KVM and Qemu setup](Debian-13%20KVM%20and%20Qemu%20setup.md)) . I will proceed to create a new volume , By clicking the `➕` Symbol next to volumes
-![](images/Pasted%20image%2020251213091047.png)
+![](../images/Pasted%20image%2020251213091047.png)
 
 7. After creating the volume select it and Then begin to configure the network settings using bridged mode
-![](images/Pasted%20image%2020251213092432.png)
+![](../images/Pasted%20image%2020251213092432.png)
 
 8. Go to **Overview → XML** and scroll down till you see HyperV
-![](images/Pasted%20image%2020251213113935.png)
+![](../images/Pasted%20image%2020251213113935.png)
 
 Replace the HyperV XML code with this
 ```xml
@@ -65,30 +65,30 @@ Replace the HyperV XML code with this
 >You must remove the line '<evmcs state="on"/>' from the following XML. I've highlighted it in bold.
 
 9. After Hitting the Apply go to TPM and do the following config 
-![](images/Pasted%20image%2020251213114350.png)
+![](../images/Pasted%20image%2020251213114350.png)
 
 >[!NOTE]
 >This is done because Win 11 only supports 2.0
 
 
 8. Hit Begin installation 
-![](images/Pasted%20image%2020251213114619.png)
+![](../images/Pasted%20image%2020251213114619.png)
 
 ## Step 2 : Installation of the VM machine 
 ---
 
 1. Select the KB Input 
-![](images/Pasted%20image%2020251213115002.png)
+![](../images/Pasted%20image%2020251213115002.png)
 2. Click on **install windows 11 and I agree checkbox**
-![](images/Pasted%20image%2020251213115020.png)
+![](../images/Pasted%20image%2020251213115020.png)
 3. Click on" **I dont have product key**"
-![](images/Pasted%20image%2020251213115117.png)
+![](../images/Pasted%20image%2020251213115117.png)
 4. Accept the terms and conditions 
-![](images/Pasted%20image%2020251213115308.png)
+![](../images/Pasted%20image%2020251213115308.png)
 
 5. Click on Next and Begin installation 
-![](images/Pasted%20image%2020251213115401.png)
+![](../images/Pasted%20image%2020251213115401.png)
 
 6. You will get this screen 
-![](images/Pasted%20image%2020251213115452.png)
+![](../images/Pasted%20image%2020251213115452.png)
 
