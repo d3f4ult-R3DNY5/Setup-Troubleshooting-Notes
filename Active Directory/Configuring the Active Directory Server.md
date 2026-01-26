@@ -83,3 +83,65 @@ Given down below is the technical specification of the Windows server
 15. Once the Installation is complete you will be signed out of the system
 16. Then login in the system again by sending the Ctrl+Alt+Del command 
 
+## Phase 2 : Creating a account in the active directory 
+---
+>[!Note]
+>1. creating a normal user account 
+>2. creating a help desk account 
+
+1. Head to the `ACTIVE DIRECTORY USERS AND COMPUTERS`
+
+![](../images/Pasted%20image%2020260126100006.png)
+
+2. If you ca click on the `view tab -> Advanced features` Then you will be able to see the epth configuration that is associated with the account
+
+>[!TIP]
+>- Includes the groups that the user belongs to 
+>- Include where the user is located 
+
+3. Head over to the computer folder and `Right Click ---> Find`, You will get a popup like this 
+
+![](../images/Pasted%20image%2020260126100401.png)
+
+4. Now go to the `In` options and **instead of computers replace it with the Entire Directory options**
+
+>[!NOTE]
+>This will find for any of the user and the computer in the entire directory 
+
+![](../images/Pasted%20image%2020260126100552.png)
+
+5. Now Double click on the `Guest User` and what will open up is the Guest Properties 
+
+>[!TIP]
+>#### Member of Tab 
+>This will show all the groups that the guest is a member of 
+>![](../images/Pasted%20image%2020260126100814.png)
+>#### Object Tab 
+>This will show where exactly the object is located 
+>![](../images/Pasted%20image%2020260126100851.png)
+
+
+6.  Now we go on to create the **Admin account for the user Helpdesk**, Head over the `User Folder` and `Right Click on the Administartor User ---> Copy`
+
+![](../images/Pasted%20image%2020260126101119.png)
+
+7. Enter the details in my case 
+
+>[!TIP]
+>- First name : `helpdesk`
+>- User logon name : `HD-01`
+>- Password : `Password1`
+
+## Phase 3 : Enabling the Recycle bin 
+---
+>[!NOTE]
+>The recycle bin must be enabled incase of **any accidental deletion**
+
+
+1. Head over to the `Active Directory Administrative Center` and Head to the `domain name(local)` , On the Right hand pane `Click on Enable Recycle Bin` and Agree to the Dialogue Box
+
+![](../images/Pasted%20image%2020260126101922.png)
+
+2. Once the Recycle Bin has been enabled the option would be greyed out 
+
+![](../images/Pasted%20image%2020260126102020.png)
