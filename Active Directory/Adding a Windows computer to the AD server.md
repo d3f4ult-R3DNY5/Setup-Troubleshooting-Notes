@@ -13,7 +13,7 @@ This Writeup contains the information on how to add a windows 11 Pro computer to
 >- Accounts : HD-01, Administrator 
 >- Passwords for all accounts : Password1
 
-## Phase 1 : IP configuration and Adapter card Configurations 
+## Phase 1 : IP configuration and Creating the user 
 ---
 1. Head to the Server 2022 VM  `Click on the VM Tab ---> Settings` 
 
@@ -74,3 +74,53 @@ ping 192.168.84.3
 
 12. once this is done then you can login in to the account on the domain
 
+## Phase 2 : Creating the Organizational Units 
+---
+>[!NOTE]
+>This phase involves the creation of the organization units to store the computers with the similar functions 
+
+1. Head to the `Active Directory Users and Computers` and Right click on the domain `Go to New ---> Organizational Unit`
+2. In my case I am going to create two organization units which are **IT and HR** Respectively, The Resultant O/P is the screen shot given below 
+
+![](../images/Pasted%20image%2020260127093738.png)
+
+3. Head to the `User directory ---> Right Click ---> New ---> User`, Create New User with the details as given below 
+![](../images/Pasted%20image%2020260127093940.png)
+
+>[!TIP]
+>![](../images/Pasted%20image%2020260127094153.png)
+>- Password : Password1
+
+4. Once the user is created, Then move the **User Patty** from `User folder ---> HR Folder`, Similarly Move the **User helpdesk** from `User Folder ---> IT folder`
+5. Once the users are moved to the respective folder, Then you could head to the Folder where the user is located and `right click on the user ---> Attribute Editor ---> View the different attributes associated with that account` 
+									OR
+	Alternatively you could use the `net user <uname> /domain` command 
+
+![](../images/Pasted%20image%2020260127095245.png)
+
+![](../images/Pasted%20image%2020260127100637.png)
+
+6. Using another VM I created using an unattended installations , I have **joined the credentials to the domain using the user account patty** 
+
+
+## Phase 3 :  Creating the password policy and Account Policy for the the Domain
+---
+1. Hit the `Win + R ---> Type gpmc.msc`, This will open the group policy management console 
+
+![](../images/Pasted%20image%2020260127153803.png)
+
+2. Head to the following `Forest.localserver.local ---> Domains ---> localserver.local ----> Default Domain Policy ---> Settings Pane `
+
+![](../images/Pasted%20image%2020260127154013.png)
+
+3. Now `Right Click ---> Default Domain Policy on the left hand side and click Edit`, You will be greeted by the screen in the below SS
+
+![](../images/Pasted%20image%2020260127154507.png)
+
+4. Head to the following path `Computer COnfigurations ---> policies ---> Windows Settings ---> Security Settings ---> Account Policies ---> Password Polcies`, I have replaced it with the settings as shown in the below screenshot
+
+![](../images/Pasted%20image%2020260127154938.png)
+
+5. Head to the following path `Computer Configurations ---> policies ---> Windows Settings ---> Security Settings ---> Account Policies ---> Account Lockout Polcies`, I have replaced it with the settings as shown in the below screenshot
+
+![](../images/Pasted%20image%2020260127155157.png)
